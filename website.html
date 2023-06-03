@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome Page</title>
+  <style>
+    body {
+      background-image: url('pp.jpg');
+      background-size: cover;
+      background-position: center;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-wrap: wrap;
+    }
+    
+    .logo-container a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      overflow: hidden;
+      position: relative;
+      transition: transform 0.3s ease-in-out;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    .logo-container a:hover {
+      transform: scale(1.1);
+    }
+    
+    .logo-container a img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
+    
+    .logo-container a:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(255, 255, 255, 0.6);
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+    
+    .logo-container a:hover:before {
+      opacity: 1;
+    }
+    
+    .logo-container a span {
+      position: absolute;
+      bottom: -30px;
+      left: 0;
+      right: 0;
+      color: #fff;
+      font-size: 16px;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+    
+    .logo-container a:hover span {
+      opacity: 1;
+    }
+    
+    .heading {
+      font-size: 32px;
+      font-weight: bold;
+      color: white;
+      margin-top: 20px;
+    }
+
+    .form-container {
+      margin-top: 20px;
+    }
+
+    .form-container input[type="text"] {
+      padding: 10px;
+      width: 300px;
+      font-size: 16px;
+    }
+
+    .form-container input[type="submit"] {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .form-container input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="heading">VIDSCAPE</h1>
+
+  <div class="form-container">
+    <form id="urlForm" onsubmit="submitForm(event)">
+      <input type="text" id="urlInput" placeholder="Enter URL">
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+  <div class="logo-container">
+    <a href="https://www.youtube.com" target="_blank">
+      <img src="youtube 3.png" alt="YouTube">
+      <span>YouTube</span>
+    </a>
+    <a href="https://www.twitch.tv" target="_blank">
+      <img src="Glyph.png" alt="Twitch">
+      <span>Twitch</span>
+    </a>
+    <a href="https://www.facebook.com" target="_blank">
+      <img src="Frame 37681.png" alt="Facebook">
+      <span>Facebook</span>
+    </a>
+    <a href="https://www.udemy.com" target="_blank">
+      <img src="image 5.png" alt="Udemy">
+      <span>Udemy</span>
+    </a>
+  </div>
+
+  <script>
+    function submitForm(event) {
+      event.preventDefault();
+      
+      // Retrieve URL value from input field
+      const urlInput = document.getElementById('urlInput');
+      const urlValue = urlInput.value;
+
+      // Redirect to the new page with the URL as a query parameter
+      window.location.href = 'newpage.html?url=' + encodeURIComponent(urlValue);
+    }
+  </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Information</title>
+  <style>
+    body {
+      background-image: url('pp.jpg');
+      background-size: cover;
+      background-position: center;
+      font-family: Arial, sans-serif;
+    }
+    
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    
+    .form-container {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 5px;
+    }
+    
+    .form-container input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    
+    .form-container button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    .form-container button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="form-container">
+      <h2>User Information</h2>
+      <form action="fin.html" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
