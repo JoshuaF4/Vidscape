@@ -6,3 +6,4 @@ import udemy_dl
 import openai
 import base64
 import pytwitch
+import whisper
