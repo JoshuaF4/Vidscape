@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome Page</title>
+  <style>
+    body {
+      background-image: url('background-image.jpg');
+      background-size: cover;
+      background-position: center;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-wrap: wrap;
+    }
+    
+    .logo-container a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      overflow: hidden;
+      position: relative;
+      transition: transform 0.3s ease-in-out;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    .logo-container a:hover {
+      transform: scale(1.1);
+    }
+    
+    .logo-container a img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
+    
+    .logo-container a:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(255, 255, 255, 0.6);
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+    
+    .logo-container a:hover:before {
+      opacity: 1;
+    }
+    
+    .logo-container a span {
+      position: absolute;
+      bottom: -30px;
+      left: 0;
+      right: 0;
+      color: #fff;
+      font-size: 16px;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+    
+    .logo-container a:hover span {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="logo-container">
+    <a href="https://www.youtube.com" target="_blank">
+      <img src="youtube 3.png" alt="YouTube">
+      <span>YouTube</span>
+    </a>
+    <a href="https://www.twitch.tv" target="_blank">
+      <img src="Glyph.png" alt="Twitch">
+      <span>Twitch</span>
+    </a>
+    <a href="https://www.facebook.com" target="_blank">
+      <img src="Frame 37681.png" alt="Facebook">
+      <span>Facebook</span>
+    </a>
+    <a href="https://www.udemy.com" target="_blank">
+      <img src="image 5.png" alt="Udemy">
+      <span>Udemy</span>
+    </a>
+  </div>
+</body>
+</html>
